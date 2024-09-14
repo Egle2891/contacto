@@ -1,0 +1,45 @@
+ 
+* {
+
+    margin: 0;
+    padding: 0;
+}
+.contacto{
+    width: 100%;
+    position: relative;
+    background-color: rgb(236, 145, 145);
+    color: white;
+}
+a {
+     
+    color: white;
+}
+h2 {
+    background-color: aquamarine;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-register {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto auto auto auto auto;
+}
+ .Mensaje{
+    background-color: black;
+    resize: none; 
+    height: 150px; 
+    width: 100%;
+ }
+ 
+.botons {      
+    position: absolute;      
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    background-color: aqua;                         
+}
+ 

@@ -6,47 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
-
             margin: 0;
             padding: 0;
         }
-        .contacto{
-            width: 100%;
+
+        .contacto {
+            
             position: relative;
-            background-color: rgb(236, 145, 145);
-            color: white;
-        }
-        a {
-             
-            color: white;
-        }
-        h2 {
+            width: 100%;
+            height: 200px;
             background-color: aquamarine;
+        }
+
+        h2 span {
             top: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            background-color: aqua;
         }
+
         .form-register {
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-row: auto auto auto auto auto;
+            grid-template-columns: repeat(3 10px);
+            grid-template-rows: repeat(5 1px);
+            gap: 2px;
         }
-         .Mensaje{
-            background-color: black;
-            resize: none; 
-            height: 150px; 
+        .controls{
+            display: grid;
+            grid-column-start: 1; 
+            margin: 10px;
+            height: 2px;
+        }
+        .Banana {
+            height: 100px;
             width: 100%;
-         }
-         
-        .botons {      
-            position: absolute;      
+        }
+        .controls2{
+            margin: 10px;
+            display: grid;
+            grid-column-start: 2;             
+        }
+        .controls3{
+            margin: 10px;
+            display: grid;
+            grid-column-start: 3;
+        }
+        .Mensaje{
+            position: relative;
+            margin: 10px;
+            background-color: black;       
+            display: grid;
+            grid-column-start: 1 2 3;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 4;
+        }
+        .botons {
+            margin: 10px;
+            position: absolute;
             bottom: 0;
             right: 0;
             width: 40%;
             text-align: center;
             padding: 10px;
-            background-color: aqua;                         
+            background-color: aqua;
         }
     </style>
 
@@ -59,30 +82,31 @@
             <span>ENVÍANOS TUS CONSULTAS</span>
         </h2>
         <form class="form-register" action="https://formspree.io/f/xpwanrqg" method="post">
-            <div>
+            <div class="controls">
                 <p>Nombre y apellido</p>
-                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                <input class="banana"  type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
             </div>
-            <div>
-                <p>teléfono</p>
-                <input class="controls" type="tel" name="Contacto" id="Contacto" placeholder="Contacto">
+            <div class="controls2">
+                <p>Teléfono</p>
+                <input   type="tel" name="Contacto" id="Contacto" placeholder="Contacto">
             </div>
-            <div>
+            <div class="controls3">
                 <p>E-mail</p>
-                <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
+                <input  type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
             </div>
-            <div>
-                <p >Mensaje</p>
-                <textarea class="Mensaje" class="controls" name="message" placeholder="Asunto"></textarea>
+            <div class="Mensaje">
+                <p>Mensaje</p>
+                <textarea class="Mensaje" class="control" name="message"
+                    placeholder="Estamos felices por escuchar todas sus quejas :-D"></textarea>
             </div>
             <input class="botons" type="submit" value="Enviar consulta">
         </form>
         <p>¿Buscas trabajo u ofreces un producto/servicio? <a href="#" class="text">Envíanos tus datos aquí →</a></p>
 
-        
+
     </section>
 
-     
+
 
 </body>
 
