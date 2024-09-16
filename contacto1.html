@@ -22,51 +22,51 @@
             background-color: aqua;
             width: 100%;                                    
             text-align: center;            
-
         }
-        .form-register{
-            display: flex;
+         
+        .form-register{             
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: repeat(5, 50px);
+           gap: 20px;           
+           width:  100%;
+           border: 2px solid #fe0101;
+           padding: 20px; 
             
-        }
-        .form-register{
-            width: 100%;
-            display: grid;
-           grid-template-columns: repeat(4, 1fr);
-           grid-template-rows: repeat(6, 50px);
-           gap: 10px;           
-           width: 500px;
-           height: 500px;
-           border: 2px solid #f3ff06;
  
         }
+    
         .controls{
-            align-items: center;
-            margin: 0;
-            border: 2px 2px;
-            padding: 10px 10px;
+            display: flex;
+            flex-direction:column;
+            padding: 10px;                                    
+        } 
+        input, textarea{
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #fe0000;
         }
-        input{
-            width: 200px;
-            height: 30px;
-        }
+
+
         .Mensaje{
-            grid-column-start: 1;
-            grid-column-end: 4;
+            grid-column: 1 / span 3;             
             width: 100%;
             height: 150px;
             resize: none;
 
         }
         .botons{
-            grid-row: 6;
+            height: 50px;
+            grid-row: 5;
             grid-column: 3;
+            align-self: end;
         }
         .t{          
-            font-size: 14px;    
-            grid-row: 6;
+            font-size: 18px;    
+            grid-row: 5;
             grid-column-start: 1;
             grid-column-end: 3;
-
+            
         }
       
     </style>
@@ -79,7 +79,7 @@
         <h2>
             <span>ENVÍANOS TUS CONSULTAS</span>
         </h2>
-        <form class="form-register" action="https://formspree.io/f/xpwanrqg" method="post">
+        <form class="form-register" action="#" method="post">
             <div class="controls">
                 <p>Nombre y apellido</p>
                 <input class="banana"  type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
