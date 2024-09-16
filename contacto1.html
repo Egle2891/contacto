@@ -8,69 +8,67 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            border-color: rgb(44, 8, 249);
         }
-
         .contacto {
-            
-            position: relative;
-            width: 100%;
-            height: 200px;
-            background-color: aquamarine;
-        }
-
-        h2 span {
-            top: 0;
             display: flex;
-            justify-content: center;
-            background-color: aqua;
+            flex-direction: column;  
+            align-items: center;  
+            padding: 20px;
+           
         }
+        h2, span{                  
+            background-color: aqua;
+            width: 100%;                                    
+            text-align: center;            
 
-        .form-register {
+        }
+        .form-register{
+            display: flex;
+            
+        }
+        .form-register{
+            width: 100%;
             display: grid;
-            grid-template-columns: repeat(3 10px);
-            grid-template-rows: repeat(5 1px);
-            gap: 2px;
+           grid-template-columns: repeat(4, 1fr);
+           grid-template-rows: repeat(6, 50px);
+           gap: 10px;           
+           width: 500px;
+           height: 500px;
+           border: 2px solid #f3ff06;
+ 
         }
         .controls{
-            display: grid;
-            grid-column-start: 1; 
-            margin: 10px;
-            height: 2px;
+            align-items: center;
+            margin: 0;
+            border: 2px 2px;
+            padding: 10px 10px;
         }
-        .Banana {
-            height: 100px;
-            width: 100%;
-        }
-        .controls2{
-            margin: 10px;
-            display: grid;
-            grid-column-start: 2;             
-        }
-        .controls3{
-            margin: 10px;
-            display: grid;
-            grid-column-start: 3;
+        input{
+            width: 200px;
+            height: 30px;
         }
         .Mensaje{
-            position: relative;
-            margin: 10px;
-            background-color: black;       
-            display: grid;
-            grid-column-start: 1 2 3;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            width: 100%;
+            height: 150px;
+            resize: none;
+
+        }
+        .botons{
+            grid-row: 6;
+            grid-column: 3;
+        }
+        .t{          
+            font-size: 14px;    
+            grid-row: 6;
+            grid-column-start: 1;
             grid-column-end: 3;
-            grid-row-start: 4;
-            grid-row-end: 4;
+
         }
-        .botons {
-            margin: 10px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40%;
-            text-align: center;
-            padding: 10px;
-            background-color: aqua;
-        }
+      
     </style>
 
     <title>Document</title>
@@ -86,11 +84,11 @@
                 <p>Nombre y apellido</p>
                 <input class="banana"  type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
             </div>
-            <div class="controls2">
+            <div class="controls">
                 <p>Teléfono</p>
                 <input   type="tel" name="Contacto" id="Contacto" placeholder="Contacto">
             </div>
-            <div class="controls3">
+            <div class="controls">
                 <p>E-mail</p>
                 <input  type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
             </div>
@@ -100,14 +98,9 @@
                     placeholder="Estamos felices por escuchar todas sus quejas :-D"></textarea>
             </div>
             <input class="botons" type="submit" value="Enviar consulta">
-        </form>
-        <p>¿Buscas trabajo u ofreces un producto/servicio? <a href="#" class="text">Envíanos tus datos aquí →</a></p>
-
-
+            <p class="t">¿Buscas trabajo u ofreces un producto/servicio? <a href="#" class="text">Envíanos tus datos aquí →</a></p>     
+        </form>   
+        
     </section>
-
-
-
 </body>
-
 </html>
